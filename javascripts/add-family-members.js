@@ -1,0 +1,13 @@
+define(["jquery"], function($) {
+  
+  return function() {
+
+    $.ajax({
+      url: "https://turner-family.firebaseio.com/  ?????   songs.json",
+      method: "POST",
+      // data: JSON.stringify(newSong)  needed????
+    }).done(function() {
+
+    });
+  };//end return function 
+});//end add family member module
