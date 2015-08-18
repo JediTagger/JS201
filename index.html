@@ -1,9 +1,17 @@
 <head>
-  <link rel="stylesheet" href="styles/main.css">  
+  <link rel="stylesheet" href="css/main.css">  
 </head>
 <body>
   <h1>My Family</h1>
   <div id="list"></div>
+  <h2>Add new family member</h2>
+  <form>
+    <label class="bot-marg">Name: <input class="bot-marg" id="name" type="text" name="name" autofocus placeholder="First Last"></label><br class="bot-marg">
+    <label class="bot-marg">Age: <input class="bot-marg" id="age" type="number" name="age"></label><br class="bot-marg">
+    <label class="bot-marg">Gender:  <input class="bot-marg" type="radio" name="sex" value="male">Male<input type="radio" name="sex" value="female">Female</label><br class="bot-marg">
+    <label>Enter a comma-delimited list of your skills here.<textarea id="skills"></textarea></label>
+  </form>
+  <button id="submit">Submit</button>
   <script data-main="javascripts/main" 
           src="bower_components/requirejs/require.js"></script>
 </body>

@@ -3,7 +3,7 @@ requirejs.config({
   paths: {
     'jquery': '../bower_components/jquery/dist/jquery.min',
     'firebase': '../bower_components/firebase/firebase',
-    'hbs': '../bower_components/require-handlebars-plugin/hbs',
+    'hbs': '../bower_components/require-handlebars-plugin/hbs'
   },
   shim: {
     'firebase': {
@@ -13,13 +13,16 @@ requirejs.config({
 });
 
 requirejs(
-  ["jquery", "firebase", "hbs", "add-family-member", "delele-family-member"],
+  ["jquery", "firebase", "hbs", "add-family-member", "delete-family-member"],
   // run these dependencies first, then run the below code
   function($, fb, Handlebars, addfam, delfam) {
     //this assigns the arguments to the above dependencies
-    var myFirebaseRef = new Firebase("https://turner-family.firebaseio.com//");
+    var myFirebaseRef = new Firebase("https://turner-family.firebaseio.com/");
     myFirebaseRef.on("value", function(snapshot) {
-      
+
     });//end firebase
+    $('#submit').click(function() {
+      addfam();
+    });
   }//end main function
 );//end requirejs
